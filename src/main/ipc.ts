@@ -1,6 +1,6 @@
 import { ipcMain } from "electron";
 import { randomUUID } from "crypto";
-import { IPC } from "@shared/constants/ipc";
+import { IPC } from "$shared/constants/ipc";
 import {
     CreateDocumentResponse,
     DeleteDocumentRequest,
@@ -9,7 +9,7 @@ import {
     FetchDocumentRequest,
     FetchDocumentResponse,
     SaveDocumentRequest
-} from "@shared/types/ipc";
+} from "$shared/types/ipc";
 
 import { store } from "./store";
 

@@ -1,6 +1,4 @@
 export function TrafficLightBar() {
-    const api = window.api;
-
     return (
         <div className="flex gap-3 p-2 top-4 ml-4 region-no-drag fixed z-50">
             <button

@@ -27,7 +27,7 @@ export function Document() {
   const { mutateAsync: saveDocument } = useMutation({
     mutationFn: async ({ title, content }: OnContentUpdatedParams) => {
       await window.api.saveDocument({
-        id,
+        id: id!,
         title,
         content,
       })

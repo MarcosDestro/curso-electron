@@ -1,7 +1,14 @@
 import { contextBridge, ipcRenderer } from 'electron'
 import { electronAPI } from '@electron-toolkit/preload'
-import { IPC } from "@shared/constants/ipc";
-import { CreateDocumentResponse, DeleteDocumentRequest, FetchAllDocumentsResponse, FetchDocumentRequest, FetchDocumentResponse, SaveDocumentRequest } from "@shared/types/ipc";
+import { IPC } from "../shared/constants/ipc";
+import {
+  CreateDocumentResponse,
+  DeleteDocumentRequest,
+  FetchAllDocumentsResponse,
+  FetchDocumentRequest,
+  FetchDocumentResponse,
+  SaveDocumentRequest }
+  from "../shared/types/ipc";
 
 // Custom APIs for renderer
 export const api = {
@@ -25,9 +32,6 @@ export const api = {
   deleteDocument(req: DeleteDocumentRequest): Promise<void>{
     return ipcRenderer.invoke(IPC.DOCUMENTS.DELETE, req);
   }
-
-  
-
 
 
   /* Pontes de comunicação
